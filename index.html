@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manvendra Sethi | Portfolio</title>
-  <meta name="description" content="Portfolio website of Manvendra Sethi - Computer Science graduate with projects in Django, cloud, and UX.">
+  <meta name="description" content="Portfolio website of Manvendra Sethi - Computer Science graduate building and deploying Django applications on AWS.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet">
@@ -45,8 +45,8 @@
       <p class="kicker">Portfolio 2026</p>
       <h1>Manvendra Sethi</h1>
       <p class="hero-text">
-        Computer Science and Statistics graduate from Bangalore, focused on building practical web products
-        with Django, cloud tools, and user-centered design.
+        Computer Science and Statistics graduate from Bangalore, focused on building and deploying practical
+        web products — from Django applications to containerized infrastructure on AWS.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#projects">View Projects</a>
@@ -58,9 +58,11 @@
     <section class="panel reveal" id="about">
       <h2>About</h2>
       <p>
-        Motivated and enthusiastic individual seeking internship opportunities to gain practical
-        experience and develop professional skills. I enjoy applying theoretical knowledge to
-        real-world projects and collaborative problem solving.
+        I build web applications end to end — from the Django backend and data layer through to
+        production deployment on AWS. Recent work includes containerizing and deploying a full
+        application stack (Docker, PostgreSQL, Nginx) on EC2 with HTTPS and cloud networking
+        configured from scratch. I enjoy the full lifecycle: writing the application, then getting
+        it live, secure, and reliable in the real world.
       </p>
     </section>
 
@@ -90,7 +92,11 @@
           <li>SQLite</li>
           <li>C/C++</li>
           <li>R</li>
-          <li>AWS</li>
+          <li>AWS (EC2, S3, IAM)</li>
+          <li>Docker</li>
+          <li>Nginx</li>
+          <li>Linux Server Admin</li>
+          <li>PostgreSQL</li>
           <li>Cloud Computing</li>
           <li>Excel</li>
           <li>UI/UX Design</li>
@@ -108,17 +114,30 @@
       <h2>Projects</h2>
       <div class="projects">
         <article class="project-card">
+          <h3>Spend Shelf</h3>
+          <p>
+            Django expense tracker with authentication, CRUD financial records, analytics
+            dashboards, recurring transactions, and CSV import/export. Deployed as a containerized
+            stack (Docker Compose, PostgreSQL, Nginx, Gunicorn) on AWS EC2, with a configured
+            reverse proxy, security groups, Elastic IP, and HTTPS via Let's Encrypt.
+            <a href="https://spendshelf.duckdns.org/" target="_blank" rel="noopener noreferrer">View Project</a>
+          </p>
+        </article>
+        <article class="project-card">
           <h3>Trip Canvas (Travel Planner)</h3>
           <p>
             Built a Django-based travel planning app with destination mapping, weather info,
             checklists, budget-aware planning, and AI itinerary generation with a fallback planner.
           </p>
         </article>
-        <article class="project-card">
-          <h3>Spend Shelf</h3>
+                <article class="project-card">
+          <h3>120 Years of Olympic History — Data Analysis</h3>
           <p>
-            Developed a Django expense tracker with authentication, CRUD financial records,
-            analytics dashboards, recurring transactions, CSV import/export, and monthly reports.
+            Cleaned and analyzed 271,116 Olympic athlete-event records (1896–2016) in SQLite,
+            answering questions on medal dominance, gender participation trends, and host-country
+            advantage using SQL window functions and a significance test. Visualized findings with
+            Matplotlib/Seaborn, including a measurable host-country medal lift confirmed via
+            sign test.
           </p>
         </article>
       </div>
