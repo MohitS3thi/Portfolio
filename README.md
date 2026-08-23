@@ -27,14 +27,27 @@ This is a static site, so it can be deployed to GitHub Pages or Vercel.
    - Branch: `main` (or your default branch), folder: `/ (root)`
 4. Save and wait for deployment.
 
-### Deploy to Vercel
-1. Import your GitHub repository in Vercel.
-2. Framework preset: `Other`.
-3. Build command: leave empty.
-4. Output directory: leave empty.
-5. Deploy.
+## Deployment — AWS S3 + CloudFront
 
-`vercel.json` is already included for static serving.
+### 1. S3 Bucket Setup
+- Created an S3 bucket 
+- Enabled **Static website hosting** on the bucket, with `index.html` as the index document
+- Uploaded `index.html`, `styles.css`, and `script.js` to the bucket root
+
+### 2. CloudFront Distribution (for HTTPS)
+- Created a CloudFront distribution with the S3 bucket's **REST API endpoint** as the origin (not the S3 website endpoint)
+- Enabled **Origin Access Control (OAC)** so the bucket stays private and is only readable by CloudFront
+- Set **Viewer protocol policy** to *Redirect HTTP to HTTPS*
+- Set **Default root object** to `index.html` (required — without it, requests to `/` fail since S3 can't resolve an empty object key)
+- Used CloudFront's default `*.cloudfront.net` domain with its built-in free HTTPS certificate (no custom domain/ACM cert needed for this)
+
+### 3. Bucket Policy
+- Restricted the bucket policy to allow `s3:GetObject` only from the specific CloudFront distribution (via `AWS:SourceArn` condition), replacing the earlier public-read policy used during initial S3-website-only testing
+- Enabled **Block all public access** on the bucket, since CloudFront (via OAC) is now the only authorized reader
+
+### Live URL
+🔗 https://d16puh3ennxkbt.cloudfront.net/
+
 
 
 
