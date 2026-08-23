@@ -7,15 +7,12 @@
   <meta name="description" content="Portfolio website of Manvendra Sethi - Computer Science graduate building and deploying Django applications on AWS.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
-  <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
-
   <header class="site-header" id="top">
-    <a class="brand" href="#top">MS</a>
+    <a class="brand" href="#top">MS<span class="cursor" aria-hidden="true">_</span></a>
     <nav class="main-nav">
       <ul>
         <li><a href="#about">About</a></li>
@@ -23,6 +20,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <span class="status-pill"><span class="dot dot-teal" aria-hidden="true"></span>available for work</span>
       <div class="social-links" aria-label="Social links">
         <a class="social-icon" href="https://www.linkedin.com/in/manvendra-sethi-129632180/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -39,23 +37,29 @@
       </div>
     </nav>
   </header>
-
+ 
   <main>
     <section class="hero reveal">
-      <p class="kicker">Portfolio 2026</p>
+      <p class="kicker">$ whoami</p>
       <h1>Manvendra Sethi</h1>
       <p class="hero-text">
         Computer Science and Statistics graduate from Bangalore, focused on building and deploying practical
         web products — from Django applications to containerized infrastructure on AWS.
       </p>
+      <div class="status-strip" aria-label="Current infrastructure">
+        <span class="status-chip status-teal"><span class="dot dot-teal"></span>EC2 — deployed</span>
+        <span class="status-chip status-teal"><span class="dot dot-teal"></span>S3 + CloudFront — deployed</span>
+        <span class="status-chip status-slate"><span class="dot dot-slate"></span>Docker / Nginx — configured</span>
+      </div>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#projects">View Projects</a>
         <a class="btn btn-secondary" href="https://www.linkedin.com/in/manvendra-sethi-129632180/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a class="btn btn-secondary" href="https://github.com/MohitS3thi" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </section>
-
+ 
     <section class="panel reveal" id="about">
+      <p class="eyebrow">// about</p>
       <h2>About</h2>
       <p>
         I build web applications end to end — from the Django backend and data layer through to
@@ -65,9 +69,10 @@
         it live, secure, and reliable in the real world.
       </p>
     </section>
-
+ 
     <section class="grid grid-2 reveal">
       <article class="panel" id="education">
+        <p class="eyebrow">// education</p>
         <h2>Education</h2>
         <div class="item">
           <h3>CHRIST (Deemed to be University)</h3>
@@ -80,8 +85,9 @@
           <p>Schooling | 06/2020</p>
         </div>
       </article>
-
+ 
       <article class="panel" id="skills">
+        <p class="eyebrow">// skills</p>
         <h2>Skills</h2>
         <ul class="chips">
           <li>Python</li>
@@ -109,11 +115,13 @@
         </ul>
       </article>
     </section>
-
+ 
     <section class="panel reveal" id="projects">
+      <p class="eyebrow">// projects</p>
       <h2>Projects</h2>
       <div class="projects">
-        <article class="project-card">
+        <article class="project-card status-teal">
+          <span class="status-chip status-teal"><span class="dot dot-teal"></span>deployed — aws ec2</span>
           <h3>Spend Shelf</h3>
           <p>
             Django expense tracker with authentication, CRUD financial records, analytics
@@ -123,14 +131,16 @@
             <a href="https://spendshelf.duckdns.org/" target="_blank" rel="noopener noreferrer">View Project</a>
           </p>
         </article>
-        <article class="project-card">
+        <article class="project-card status-slate">
+          <span class="status-chip status-slate"><span class="dot dot-slate"></span>local / dev</span>
           <h3>Trip Canvas (Travel Planner)</h3>
           <p>
             Built a Django-based travel planning app with destination mapping, weather info,
             checklists, budget-aware planning, and AI itinerary generation with a fallback planner.
           </p>
         </article>
-                <article class="project-card">
+        <article class="project-card status-amber">
+          <span class="status-chip status-amber"><span class="dot dot-amber"></span>analysis complete</span>
           <h3>120 Years of Olympic History — Data Analysis</h3>
           <p>
             Cleaned and analyzed 271,116 Olympic athlete-event records (1896–2016) in SQLite,
@@ -142,8 +152,9 @@
         </article>
       </div>
     </section>
-
+ 
     <section class="panel reveal" id="certificates">
+      <p class="eyebrow">// certificates</p>
       <h2>Certificates</h2>
       <ul>
         <li>Complete Python Developer in 2023: Zero to Mastery (Udemy)</li>
@@ -154,19 +165,21 @@
       </ul>
       <p><strong>Languages:</strong> English, Hindi</p>
     </section>
-
+ 
     <section class="panel contact reveal" id="contact">
+      <p class="eyebrow">// contact</p>
       <h2>Contact</h2>
       <p>Bangalore, Karnataka</p>
       <p><a href="mailto:imohit.sethi02@gmail.com">imohit.sethi02@gmail.com</a></p>
       <p><a href="https://github.com/MohitS3thi" target="_blank" rel="noopener noreferrer">github.com/MohitS3thi</a></p>
     </section>
   </main>
-
+ 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Manvendra Sethi</p>
+    <p>© <span id="year"></span> Manvendra Sethi<span class="cursor" aria-hidden="true">_</span></p>
   </footer>
-
+ 
   <script src="script.js"></script>
 </body>
 </html>
+ 
