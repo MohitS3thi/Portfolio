@@ -10,14 +10,16 @@ A simple, responsive personal portfolio website built with plain HTML, CSS, and 
 ## Project Structure
 - `index.html` - main page content
 - `styles.css` - styling and responsive layout
-- `script.js` - small interactions (scroll reveal and current year)
+- `script.js` - stamps the current year in the footer
+- `assets/` - `portrait-stipple.png`, the hero illustration
+- `Manvendra-Sethi-Resume.pdf` - the résumé, linked from the hero spec and the contact section
 
 ## Run Locally
 You can open `index.html` directly in the browser, or run a local server.
 
 
 ## Deployment
-This is a static site, so it can be deployed to GitHub Pages or Vercel.
+This is a static site, so it can be deployed to GitHub Pages, S3 + CloudFront, or any other static host.
 
 ### Deploy to GitHub Pages
 1. Push this folder to a GitHub repository.
@@ -32,7 +34,7 @@ This is a static site, so it can be deployed to GitHub Pages or Vercel.
 ### 1. S3 Bucket Setup
 - Created an S3 bucket 
 - Enabled **Static website hosting** on the bucket, with `index.html` as the index document
-- Uploaded `index.html`, `styles.css`, and `script.js` to the bucket root
+- Uploaded `index.html`, `styles.css`, `script.js`, `Manvendra-Sethi-Resume.pdf` and the `assets/` folder to the bucket root (keep the `assets/` prefix — the hero image is referenced as `assets/portrait-stipple.png`)
 
 ### 2. CloudFront Distribution (for HTTPS)
 - Created a CloudFront distribution with the S3 bucket's **REST API endpoint** as the origin (not the S3 website endpoint)
@@ -44,6 +46,7 @@ This is a static site, so it can be deployed to GitHub Pages or Vercel.
 ### 3. Bucket Policy
 - Restricted the bucket policy to allow `s3:GetObject` only from the specific CloudFront distribution (via `AWS:SourceArn` condition), replacing the earlier public-read policy used during initial S3-website-only testing
 - Enabled **Block all public access** on the bucket, since CloudFront (via OAC) is now the only authorized reader
+
 
 ### Live URL
 🔗 https://d16puh3ennxkbt.cloudfront.net/
