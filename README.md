@@ -11,8 +11,8 @@ A simple, responsive personal portfolio website built with plain HTML, CSS, and 
 - `index.html` - main page content
 - `styles.css` - styling and responsive layout
 - `script.js` - stamps the current year in the footer
-- `assets/` - `portrait-stipple.png`, the hero illustration
-- `Manvendra-Sethi-Resume.pdf` - the résumé, linked from the hero spec and the contact section
+- `assets/` - `portrait-stipple.png`
+- `Manvendra-Sethi-Resume.pdf` 
 
 ## Run Locally
 You can open `index.html` directly in the browser, or run a local server.
