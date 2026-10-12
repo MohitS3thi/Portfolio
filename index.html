@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Manvendra Sethi - backend and cloud</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manvendra Sethi - backend engineer</title>
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FBF5EA'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%2314120E'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +32,7 @@
           <span class="sr-only">GitHub</span>
       </a>
       <a class="hide-sm" href="Manvendra-Sethi-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      <a class="hide-sm" href="#experience">Experience</a>
       <a class="hide-sm" href="#work">Work</a>
       <a class="hide-sm" href="#stack">Stack</a>
       <a href="#background">Background</a>
@@ -46,10 +49,10 @@
         <span><span>Manvendra</span></span>
         <span><span>Sethi</span></span>
       </h1>
-      <p class="hero-claim">Building and deploying practical web products - from Python applications to containerized infrastructure on AWS.</p>
+      <p class="hero-claim">Building and deploying practical web and mobile products - Go and Flutter at work, Next.js and Python beside it.</p>
       <p class="hero-detail">
-        Containers, reverse proxies, TLS certificates and AWS networking - plus the
-        application code sitting behind all of it.
+        Backend intern at VALANTECH on Suljhaoo, and a full-stack engineer on Maansik.
+        Application code, reverse proxies, TLS and AWS networking.
       </p>
       <dl class="spec">
         <div>
@@ -57,12 +60,12 @@
           <dd>Bangalore, India</dd>
         </div>
         <div>
-          <dt>Graduated</dt>
-          <dd>2024, CHRIST University</dd>
+          <dt>Now</dt>
+          <dd>VALANTECH, remote</dd>
         </div>
         <div>
-          <dt>Open to</dt>
-          <dd>Backend and cloud roles</dd>
+          <dt>Graduated</dt>
+          <dd>2024, CHRIST University</dd>
         </div>
         <div>
           <dt>Languages</dt>
@@ -77,6 +80,34 @@
     </figure>
   </section>
 
+  <section class="band" id="experience">
+    <div class="sheet row">
+      <div class="rail">
+        <h2 class="rail-name">Experience</h2>
+        <p class="rail-note">Current role. Remote since October 2026.</p>
+      </div>
+      <div class="band-body">
+        <ul class="ledger">
+          <li>
+            <p class="state is-live">now</p>
+            <div class="entry">
+              <h3>Backend Developer Intern, VALANTECH</h3>
+              <ul class="stack">
+                <li>Flutter</li><li>Go</li><li>offline-first</li>
+              </ul>
+              <p>
+                Building the <b>Suljhaoo</b> consumer app for kirana stores and MSMEs,
+                across the Flutter client and the Go services behind it. The product
+                is offline-first: syncing, the delivery workflow, and day-to-day
+                feature work with the VALANTECH team.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="band" id="work">
     <div class="sheet row">
       <div class="rail">
@@ -85,6 +116,24 @@
       </div>
       <div class="band-body">
         <ul class="ledger">
+
+          <li>
+            <p class="state is-wip">building</p>
+            <div class="entry">
+              <h3>Maansik</h3>
+              <ul class="stack">
+                <li>Go</li><li>chi</li><li>Next.js</li><li>React</li>
+                <li>TypeScript</li><li>Supabase</li><li>Bazel</li><li>CI/CD</li>
+              </ul>
+              <p>
+                Co-building a mental-wellness platform: a Go backend (chi, Uber Fx, pgx, Bazel)
+                on Supabase Postgres with row-level security, and a Next.js / React / TypeScript
+                frontend. Thought records are encrypted with <b>AES-256-GCM</b>, people stay
+                behind pseudonymous aliases, and urgent help routes to Tele-MANAS 14416 or 112.
+                Docker images go to GHCR, with CI/CD aimed at EC2.
+              </p>
+            </div>
+          </li>
 
           <li>
             <p class="state is-live">live</p>
@@ -96,9 +145,10 @@
               </ul>
               <p>
                 Expense tracker with authentication, analytics dashboards, recurring
-                transactions and CSV import and export. I configured the reverse proxy,
-                security groups, Elastic IP and <b>HTTPS through Let's Encrypt</b> by hand
-                on a single EC2 instance.
+                transactions and CSV import and export. Multi-container stack on one EC2
+                instance: reverse proxy, security groups, Elastic IP and
+                <b>HTTPS through Let's Encrypt</b>. In production I tracked down a Gunicorn
+                bind failure and an Nginx stale-DNS 502.
               </p>
             </div>
             <a class="visit" href="https://spendshelf.duckdns.org/" target="_blank" rel="noopener noreferrer">spendshelf.duckdns.org</a>
@@ -117,8 +167,9 @@
                 a scoring engine resolves the characters handwriting makes ambiguous -
                 <b>0 against O, 1 against l against I</b> - by weighing each candidate
                 against nearby keywords, indentation and library patterns. It then detects
-                the language across nine options and extracts dependencies. Gemini sits
-                behind a provider interface and can be swapped out.
+                the language across nine options and extracts dependencies, with pytest
+                coverage on the core modules. Gemini sits behind a provider interface
+                and can be swapped out.
               </p>
             </div>
             <a class="visit" href="https://github.com/MohitS3thi/CodeScan-IDE" target="_blank" rel="noopener noreferrer">view on GitHub</a>
@@ -145,7 +196,7 @@
             <div class="entry">
               <h3>Trip Canvas</h3>
               <ul class="stack">
-                <li>Django</li><li>maps</li><li>weather API</li>
+                <li>Django</li><li>maps</li><li>weather API</li><li>SQLite</li>
               </ul>
               <p>
                 Travel planner with destination mapping, weather, packing checklists and
@@ -154,22 +205,6 @@
               </p>
             </div>
             <a class="visit" href="https://github.com/MohitS3thi/Travel-Planner" target="_blank" rel="noopener noreferrer">view on GitHub</a>
-          </li>
-
-          <li>
-            <p class="state is-done">complete</p>
-            <div class="entry">
-              <h3>120 years of Olympic history</h3>
-              <ul class="stack">
-                <li>SQLite</li><li>window functions</li><li>Matplotlib</li><li>Seaborn</li>
-              </ul>
-              <p>
-                Cleaned and analysed <b>271,116 athlete-event records</b> from 1896 to 2016
-                to test medal dominance, gender participation trends and host-country
-                advantage. The host-country medal lift held up under a sign test.
-              </p>
-            </div>
-            <a class="visit" href="https://github.com/MohitS3thi/120-Years-of-Olympic-History-Data-Analysis" target="_blank" rel="noopener noreferrer">view on GitHub</a>
           </li>
 
         </ul>
@@ -186,37 +221,37 @@
       <div class="band-body">
         <div class="groups">
           <div class="group">
+            <h3>Languages</h3>
+            <ul>
+              <li>Go</li><li>Dart</li><li>TypeScript</li><li>Python</li>
+              <li>SQL</li><li>JavaScript</li><li>R</li>
+            </ul>
+          </div>
+          <div class="group">
+            <h3>Frontend</h3>
+            <ul>
+              <li>Flutter</li><li>Next.js</li><li>React</li><li>HTML / CSS</li>
+            </ul>
+          </div>
+          <div class="group">
             <h3>Backend</h3>
             <ul>
-              <li>Python</li><li>Django</li><li>FastAPI</li><li>PostgreSQL</li>
-              <li>SQL</li><li>SQLite</li><li>JavaScript</li><li>C / C++</li>
+              <li>chi</li><li>Django</li><li>FastAPI</li><li>REST APIs</li><li>Supabase Auth</li>
             </ul>
           </div>
           <div class="group">
-            <h3>Infrastructure</h3>
+            <h3>Data</h3>
             <ul>
-              <li>AWS EC2</li><li>S3</li><li>CloudFront</li><li>IAM</li>
-              <li>Docker</li><li>Nginx</li><li>Gunicorn</li><li>Linux administration</li><li>TLS</li>
+              <li>PostgreSQL</li><li>Supabase RLS</li><li>SQLite</li><li>pgx</li>
+              <li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li>
             </ul>
           </div>
           <div class="group">
-            <h3>Vision and LLMs</h3>
+            <h3>Cloud</h3>
             <ul>
-              <li>Pillow</li><li>image preprocessing</li><li>OCR pipelines</li>
-              <li>Google Gemini</li>
-            </ul>
-          </div>
-          <div class="group">
-            <h3>Data and statistics</h3>
-            <ul>
-              <li>R</li><li>NumPy</li><li>significance testing</li><li>Matplotlib</li>
-              <li>Seaborn</li><li>Excel</li>
-            </ul>
-          </div>
-          <div class="group">
-            <h3>Also</h3>
-            <ul>
-              <li>UI and UX design</li><li>Blender</li><li>3ds Max</li>
+              <li>AWS EC2</li><li>S3</li><li>CloudFront</li><li>IAM</li><li>SSM</li>
+              <li>Docker</li><li>Docker Compose</li><li>GHCR</li><li>Nginx</li>
+              <li>Gunicorn</li><li>TLS</li><li>CI/CD</li><li>Bazel</li><li>Linux</li>
             </ul>
           </div>
         </div>
@@ -231,14 +266,13 @@
       </div>
       <div class="band-body">
         <p class="prose">
-          I studied computer science, mathematics and statistics, then spent my time since
-          learning the half of the job that coursework skips: getting an application off a
-          laptop and onto a server where strangers can reach it safely. I pick problems that
-          have little to do with each other on purpose - a containerised expense tracker, a
-          handwriting-recognition pipeline, a statistical study of a century of Olympic
-          results - because the unfamiliar part is where the learning is. In practice that
-          means I am as comfortable debugging a reverse proxy or an IAM policy as I am
-          writing the application code sitting behind it.
+          I studied computer science, mathematics and statistics, then went after the half
+          of the job that coursework skips: software other people can actually reach.
+          That is Suljhaoo at VALANTECH right now - a Flutter app and Go services for
+          kirana stores that have to keep working offline. I also co-build Maansik, a
+          mental-wellness platform with a Go API and a Next.js frontend, and I still put
+          my own projects on AWS, reverse proxies, TLS certificates and security groups
+          included.
         </p>
 
         <div class="two-up">
@@ -248,7 +282,7 @@
               <li>
                 <b>CHRIST (Deemed to be University)</b>
                 B.Sc. in computer science, mathematics and statistics
-                <span>Bangalore · 2024</span>
+                <span>Bangalore · Aug 2021 - May 2024</span>
               </li>
               <li>
                 <b>Don Bosco Senior Secondary School</b>
@@ -280,6 +314,7 @@
         <div class="band-body">
           <a class="mailto" href="mailto:manvendrasethi20@gmail.com">manvendrasethi20@gmail.com</a>
           <ul class="elsewhere">
+            <li><a href="tel:+917088708949">+91 70887 08949</a></li>
             <li><a href="Manvendra-Sethi-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a></li>
             <li><a href="https://www.linkedin.com/in/manvendra-sethi-129632180/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             <li><a href="https://github.com/MohitS3thi" target="_blank" rel="noopener noreferrer">GitHub</a></li>
